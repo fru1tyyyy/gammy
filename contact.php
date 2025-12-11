@@ -13,13 +13,13 @@ if (isset($_POST["send"])) {
     $mail->isSMTP();                              
     $mail->Host       = 'smtp.gmail.com';       
     $mail->SMTPAuth   = true;             
-    $mail->Username   = 'gammy358@gmail.com';   
-    $mail->Password   = 'qtzembixnzztupzz';      
+    $mail->Username   = '';   
+    $mail->Password   = '';      
     $mail->SMTPSecure = 'ssl';          
     $mail->Port       = 465;                                    
 
     $mail->setFrom( $_POST["email"], $_POST["name"]); 
-    $mail->addAddress('gammy358@gmail.com');    
+    $mail->addAddress('');    
     $mail->addReplyTo($_POST["email"], $_POST["name"]);
 
     $mail->isHTML(true);               
@@ -78,4 +78,5 @@ if (isset($_POST["send"])) {
     </form>
   </div>
 </body>
+
 </html>
